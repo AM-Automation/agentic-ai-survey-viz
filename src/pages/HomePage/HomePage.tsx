@@ -1248,7 +1248,7 @@ export const HomePage: React.FC = () => {
                   Take the Survey Now
                 </a>
                 <a
-                  href="https://github.com/andre/agentic-ai-survey-viz"
+                  href="https://github.com/AM-Automation/agentic-ai-survey-viz"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
