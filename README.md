@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+# Agentic AI Survey Visualizer 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Public Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/AM-Automation/agentic-ai-survey-viz)
+[![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Design](https://img.shields.io/badge/Design-Apple--Grade-black)](https://developer.apple.com/design/)
 
-Currently, two official plugins are available:
+Ein hochmodernes Dashboard zur Visualisierung und statistischen Analyse der **Agentic AI Adoption** im Software Development Life Cycle (SDLC). Entwickelt im Rahmen einer Masterarbeit 2026.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Projektziel
+Ziel dieses Dashboards ist es, die Synergieeffekte zwischen der methodischen Reife von Softwareteams (SDLC Maturity) und dem Einsatz generativer KI-Agenten wissenschaftlich fundiert darzustellen. Es liefert nicht nur deskriptive Statistiken, sondern nutzt Inferenzstatistik, um Kausalitäten und Signifikanzen aufzuzeigen.
 
-## React Compiler
+## ✨ Key Features (Phase 7: Precision & Clarity)
+*   **Apple-Grade UI/UX**: Minimalistisches Design, Glassmorphism-Effekte und flüssige Animationen mit `framer-motion`.
+*   **Statistische Tiefe**:
+    *   **Inferenzstatistik**: Automatische Berechnung von p-Werten (Signifikanz) für Korrelationen.
+    *   **Varianz-Analyse**: Boxplot-Visualisierungen zur Darstellung von Konsens und Ausreißern in den SDLC-Phasen.
+    *   **Clustering**: Algorithmische Segmentierung der Teilnehmer in Profile (AI Champions, Pragmatisten, Beobachter).
+    *   **Variable Importance**: Identifikation der stärksten Treiber für Produktivitätsgewinne.
+*   **Dynamic Insight Layer**: Automatisierte Interpretation der Daten in natürlicher Sprache.
+*   **Executive Summary**: Hochkarätige Zusammenfassung der signifikantesten Befunde.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
+*   **Core**: React 19, TypeScript 5, Vite
+*   **Visualization**: @nivo/bar, @nivo/pie (Charts)
+*   **Animation**: Framer Motion
+*   **Styling**: Styled-Components & CSS Variables
+*   **Data Processing**: PapaParse (CSV) & Custom Statistical Modules (`statisticalAnalysis.ts`)
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Repo klonen**:
+    ```bash
+    git clone https://github.com/AM-Automation/agentic-ai-survey-viz.git
+    cd agentic-ai-survey-viz
+    ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2.  **Abhängigkeiten installieren**:
+    ```bash
+    npm install
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3.  **Dev-Server starten**:
+    ```bash
+    npm run dev
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.  **Build für Production**:
+    ```bash
+    npm run build
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📊 Datenbasis
+Das Dashboard visualisiert anonymisierte Umfragedaten von Software-Experten. Die Daten sind unter `public/data/Umfrage.csv` abgelegt.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📄 Lizenz
+Dieses Projekt dient akademischen Zwecken und ist unter der MIT Lizenz veröffentlicht.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+*Erstellt zur Unterstützung der Masterarbeit zum Thema "Agentic AI in der Softwareentwicklung".*
